@@ -26,7 +26,7 @@ class TaskController extends Controller
             'title' => $request->title,
         ]);
 
-        return redirect()->route('tasks.index');
+        return redirect()->route('tasks.index')->with('success', 'Tarea creada con éxito.');
     }
 
     public function update(Request $request, Task $task)
